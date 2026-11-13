@@ -187,6 +187,17 @@
         };
     };
 
+    // オートマウス中でもスペース長押しでスクロールできるようにする
+    // （トラックボールのドライバーは「いちばん上の有効なレイヤー」で動きを決めるため、
+    //   レイヤー2 とオートマウスのレイヤー6 が両方有効なときに、その上のレイヤー7 を有効にする）
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        scroll_while_automouse {
+            if-layers = <2 6>;
+            then-layer = <7>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -301,6 +312,15 @@
             >;
 
             sensor-bindings = <&scroll_up_down>;
+        };
+        scroll {
+            display-name = "scroll";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans
+            >;
         };
     };
 };
