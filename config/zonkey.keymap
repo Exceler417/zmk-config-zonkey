@@ -221,7 +221,7 @@
 &trans      &trans     &trans  &trans  &trans  &trans      &trans       &trans       &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_2 {
