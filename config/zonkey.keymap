@@ -221,7 +221,7 @@
 &trans      &trans     &trans  &trans  &trans  &trans      &trans       &trans       &kp DEL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_2 {
@@ -238,7 +238,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_3 {
